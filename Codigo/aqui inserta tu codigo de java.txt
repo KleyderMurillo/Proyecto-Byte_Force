@@ -1,0 +1,3 @@
+te recomiendo que insertes el archivo .java que neatbeans deja
+tambien necesitas crear tu carpeta llamada Ejercicio-(tu numero de ejercicio que te toco)
+y dentro de esta carpeta, agregas tu archivo .java

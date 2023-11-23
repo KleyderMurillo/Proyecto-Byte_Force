@@ -1,0 +1,1 @@
+dentro de esta carpeta insertaras las imagenes que se hayan usado en el latex
