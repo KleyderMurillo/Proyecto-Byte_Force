@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 # Proyecto-Byte_Force
-=======
-# Proyecto-byte_Force
->>>>>>> 9d1265e39ff84e06a9387a2b59c1524d34a51e1e
+>>>>>>>
 
 
 # Integrantes 
