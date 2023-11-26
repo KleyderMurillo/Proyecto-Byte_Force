@@ -1,0 +1,207 @@
+%cargar plantilla
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+%cargar paquetes(usepackage)
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[colorlinks=true,urlcolor=cyan,linkcolor=black,citecolor=cyan]{hyperref}
+
+%sangria y margenes de la hoja
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+\begin{document} %inicia en documento
+
+%plantilla imprimir codigo Java
+
+\lstnewenvironment{javaCode}[1][]
+{\lstset{
+    language=Java,
+    basicstyle=\footnotesize\ttfamily,
+    numbers=left,
+    numberstyle=\tiny,
+    stepnumber=1,
+    numbersep=5pt,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{purple},
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false,
+    frame=single,
+    captionpos=b,
+    #1
+}}
+{}
+% --- Datos de la práctica y de los alumnos ------
+\title{\includegraphics[with=8cm]{imagen/Logo de itsoeh.png}\\ \vspace*{0.2cm} {\Large Instituto Tecnológico Superior del Occidente del Estado de Hidalgo} \\
+\vspace*{0.5cm}
+{\it \huge Proyecto Integrador} \\  
+{\normalsize Prototipo de solución a problemas de ingeniería aplicados a Primer semestre} \\
+{\vspace{1cm} \large \textbf{Coordinador del proyecto:} \\ Dr. Cuadros Romero Francisco Javier} \\ 
+\vspace{1cm}
+{\large \textbf{Integrantes del Equipo:}}
+\vspace{0.5cm}
+}
+%titilo del documento 
+\author 
+{\IEEEauthorblockN{1\textsuperscript{er} Lozano Camargo Diego}
+\IEEEauthorblockA{\textit{Estudiante de iTIC'S} \\
+\textit{ITSOEH}\\
+San Salvador, Hgo. \\
+230110530@itsoeh.edu.mx}
+\and
+
+\IEEEauthorblockN{2\textsuperscript{do} Reyes Garcia Azucena}
+\IEEEauthorblockA{\textit{Estudiante de iTCS'S} \\
+\textit{ITSOEH}\\
+Tezontepec de Aldama, Hgo. \\
+230110874@itsoeh.edu.mx}
+\and
+
+\IEEEauthorblockN{3\textsuperscript{er} Guerrero Hernandez Xavier Amed}
+\IEEEauthorblockA{\textit{Estudiante de iTCS'S} \\
+\textit{ITSOEH}\\
+Atitalaquia, Hgo. \\
+230110579@itsoeh.edu.mx}
+\and
+
+\IEEEauthorblockN{4\textsuperscript{to} López Gonzalez Daniel}
+\IEEEauthorblockA{\textit{Estudiante de iTCS'S} \\
+\textit{ITSOEH}\\
+Chilcuautla, Hgo. \\
+230110443@itsoeh.edu.mx}
+\and
+
+\IEEEauthorblockN{5\textsuperscript{to} Murillo Martínez Kleyder}
+\IEEEauthorblockA{\textit{Estudiante de iTCS'S} \\
+\textit{ITSOEH}\\
+Progreso de Obregon, Hgo. \\
+230110626@itsoeh.edu.mx}
+\and
+
+}
+
+
+\maketitle  %termina el titulo
+\clearpage
+\onecolumn
+\tableofcontents
+\clearpage
+\twocolumn
+%resumen del documento (maximo 150 palabras)
+\begin{abstract} 
+Durante el semestre Agosto-Diciembre 2023, se abarcaron siete materias de las cuales estuvimos trabajando diversos temas, se escogieron tres problemas  de Cálculo y tres de Matemática Discretas, los cuales se desarrollaron con ayuda de Fundamentos de Programación, la solución de cada uno de ellos se agrego al repositorio de GitHub, posterior hacer el siguiente informe con la resolución de cada uno de los problemas asignados. 
+\end{abstract}
+
+%Terminos relevantes del proyecto
+\begin{IEEEkeywords}
+Conocimientos, Matemáticas, Calculo, Problemas, Solución. 
+\end{IEEEkeywords}
+
+%Descripción de todo el documento, se escribe al final 
+\section{Introducción}
+En este documento se presentas los problemas de primer semestre de ingeniería a resolver: El Primer Problema es encontrar la ecuación de la recta dados dos puntos en el plano cartesiano $ (x_1 - y_1) $ y $ (x_2 - y_2) $ obteniendo la pendiente m que se define como $ m = (y_2 - y_1)/ (x_2 - x_1) $  para dar como resultado la ecuación de la recta de la forma $ y = m x 
++ b $ donde b el punto de la la intersección con el eje y; Segundo Problema consiste en encontrar el valor de las raíces de la ecuación cuadrática de la forma $ ax^2 +bx + c = 0 $, de a cuerdo a la formula general $ x = (-b\pm \sqrt{b^2-4ac})/(2a)$  donde $ a, b y c $ son coeficientes que acompañan a la ecuación: como tercer problema es arrojar si un punto dado del plano cartesiano esta dentro o fuera de una circunferencia con centro fuera del origen comparando el valor del radio de la circunferencia y la distancia que hay entre el punto dado con el el punto que marca el centro de la circunferencia, esta distancia la encontramos con la formula de distancia entre dos puntos en el plano cartesiano que se define como  $d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2} $ de esta manera ya hay una solución para el problema; el cuarto problema trata de encontrar el numero binario correspondiente a un numero decimal dado por un usuario el cual tiene un método de división sucesiva para encontrar el numero binario del decimal; quinto problema esto es lo contrario al problema anterior este consiste en encontrar el numero decimal al ingresar el numero binario, este usa el método de potenciación teniendo como base dos y un exponente con valor a la posición del dígito del numero binario recordando que comienza de derecha a izquierda, estos problemas podrían pareces iguales, aunque cada uno de ellos utiliza una metodología diferente; sexto problema encontrar una expresión booleana que agregue salidas a la tabla de $n$ bits, donde $n$ es el valor que agregara el usuario.\\ 
+Los problemas ya resumidos brevemente fueron resueltos con la metodología de las 6D's: descripción del problema, definición de solución, diseño de la solución, desarrollo de la solución, depuración y pruebas.
+
+\section{Objetivos}
+\subsection{Objetivo General}
+\begin{itemize}
+    \item El objetivo general del uso de software de resolución de problemas de ingeniería es mejorar la eficiencia y efectividad 
+\end{itemize}
+
+\subsection{Objetivos Específicos}
+\begin{enumerate}
+    \item Promover el trabajo en equipo para el desarrolló de proyectos que involucren resolución de problemas y el uso de diferentes herramientas,  en un habiente sano.
+    \item Desarrollar habilidades para la creación de diagramas de flujo que complementan los ejercicios  propuestos.
+    \item Utilizar los conceptos de matemáticas discretas y fundamentos de la programación para desarrollar un algoritmo que, dado una tabla de verdad de n bits, genere la expresión booleana que represente de manera precisa las salidas de la tabla.
+    \item 
+    \item 
+    \item 
+\end{enumerate}
+
+\input{Ex1}
+
+\input{Ex2}
+
+\input{Ex3}
+
+\input{Ex4}
+
+\input{Ex5}
+
+\input{Ex6}
+
+
+%en esta session va la conclusion 
+\subsection{Conclusión}
+
+En este proyecto concluimos diversos problemas  de principio a fin.  A lo largo del proceso, nos enfrentamos a desafíos matemáticos y algorítmicos los cuales, con dedicación y colaboración, logramos resolver de manera satisfactoria.
+
+Este proyecto no solo puso a prueba nuestras habilidades técnicas en el ámbito de nuestras materias, sino que también ayudo nuestra capacidad para abordar problemas matemáticos desde una perspectiva práctica. La intersección entre las matemáticas y la programación nos permitió no solo comprender la teoría, sino aplicar estos conocimientos de manera efectiva para encontrar soluciones correctas.
+
+Es importante recalcar que como integrantes aprendimos a trabajar mejor en equipo, cada uno propuso sus ideas y tomamos en cuenta cada una de estas, había ciertos bloques de temas en los cuales nos costa baba mas lo habitual anteriormente. 
+
+Al finalizar este proyecto, no solo hemos alcanzado nuestras metas, sino que también hemos adquirido una comprensión más profunda. Este conocimiento no solo es valioso en términos académicos, sino que también se traduce en habilidades prácticas que pueden aplicarse en diversos contextos profesionales.
+Creemos que estos proyectos ayudan a consolidar a el alumno como un estudiante competente para que pueda estar futuros proyectos a nivel profesional, cada proyecto brinda la experiencia lo que hace que seas mejor en cada aspecto que trabajes.
+
+\subsection{Agradecimientos}
+Gracias  Goggle, poe y chatGPT y mas importante al bicho por motivarme  a seguir adelante
+
+%librero de reporte integrador
+\begin{thebibliography}{00}
+  \bibitem{articuloRecta}
+  Khan Academy, October 20, 2023, Tangent lines and rates of change,
+  https://www.khanacademy.org/math/calculus-all-old/taking-derivatives-calc/using-the-formal-definition-of-derivative-calc/a/tangent-lines-and-rates-of-change
+
+
+    \bibitem{articuloEcuación}
+    Comprender la fórmula de la cuadrática (artículo) | Khan Academy. (s. f.). Khan Academy. https://es.khanacademy.org/math/algebra-home/alg-quadratics/alg-solving-quadratics-using-the-quadratic-formula/a/quadratic-formula-explained-article
+
+
+    \bibitem{articulocirCunferencia}
+    Revisión de ecuación del círculo (artículo) | Khan Academy. (s. f.). Khan Academy. https://es.khanacademy.org/math/eb-3-semestre-bachillerato-nme/x4b655b3cb9bfe4eb:ecuacion-de-la-circunferencia/x4b655b3cb9bfe4eb:ecuacion-general-de-la-circunferencia/a/circle-equation-review
+
+    \bibitem{articuloDecimalBinmario}
+    Sistemas binarios y decimales. (s. f.). EDteam - En español nadie te explica mejor. https://ed.team/blog/sistemas-binarios-y-decimales
+
+    \bibitem{articuloBinario}
+    Sistemas binarios y decimales. (s. f.). EDteam - En español nadie te explica mejor. https://ed.team/blog/sistemas-binarios-y-decimales#
+    
+\end{thebibliography}
+
+\subsection{Biografías}
+
+\textbf{Lozano Camargo Diego} \\
+Es estudiante del Instituto Tecnológico Superior del Occidente del Estado de Hidalgo, que actualmente cursa el primer semestre en la carrera de Ingeniería en Tecnologías de la Información y Comunicaciones(TICs). Nació en Actopan Hidalgo el 19 de Marzo del 2005 y actualmente tiene 18 años, le gusta jugar fútbol, ver series en su tiempo libre así como jugar videojuegos y salir con sus amigos. \\
+\href{https://github.com/diego2334577}{GitHub de Diego Lozano Camargo}
+
+\textbf{Reyes Garcia Azucena} \\
+Estudiante actual del Instituto Tecnológico Superior del Occidente del Estado de Hidalgo, estudia el primer semestre en la carrera de Ingeniería  en Tecnologías de la Información y la Comunicaciones (TIC's), Nació el 30 de septiembre del 2005 en la localidad de Panuaya  Municipio de Tezontepec de Aldama, Estado de Hidalgo. Estudio el preescolar, primaria y secundaria en la localidad donde actualmente se encuentra viviendo, San Gabriel, posteriormente estudio la preparatoria en el Colegio de Bachilleres (Plantel Atengo) donde fue reconocida por el proyecto ACMAS el cual fue un impacto a nivel subsistema ya que 50 planteles fueron beneficiados. \\
+\href{https://github.com/AzucenaReyesGarcia}{GitHub de Azucena Reyes Garcia}\\
+
+\textbf{Guerrero Hernandez Xavier Amed} \\
+Un joven estudiante que nació el 17 de febrero de 2005 en Tula de Allende Hidalgo, estudia el primer semestre de (TICs) en Instituto Tecnológico Superior del Occidente del Estado de Hidalgo paso su kinder y primaria en su pueblo Atitalaquia, para después estudiar la secundaria en un pueblo llamado Cardonal,terminó la prepa en el Colegio de bachilleres de Atotonilco de Tula, fue 3er lugar del Estatal de 100 metros en Pachuca. \\
+\href{https://github.com/XavierGuerreroo}{GitHub de Xavier Amed Guerrero Hernandez} \\
+
+\textbf{Lopez Gonzales Daniel} \\
+%poner su biografia
+Joven estudiante actual del Instituto Tecnológico Superior del Occidente del Estado de Hidalgo, estudia el primer semestre de Ingeniería de Tecnología de la Información y la Comunicaciones (ITICs), nació el 12 de noviembre de 2004 en Chilcuautla, Hidalgo, se localiza en la localidad de Tlacotlapilco, municipio de Chilcuautla, paso el preescolar y primaria en su localidad de Tlacotlapilco, su secundaria lo concluyo en la localidad de Santa Ana Batha, al igual que su preparatoria. \\
+\href{https://github.com/LopezDanielgod}{GitHub de Daniel Lopez Gonzalez}\\
+
+\textbf{Murillo Martínez Kleyder} \\
+%poner su biografia
+Actualmente es estudiante del Instituto Tecnológico Superior del Occidente del Estado de Hidalgo (ITSOEH) en la carrera de Tecnologías de la Información Y la Comunicación (TIC´s). Nació el 10 de mayo del 2005 en Ixmiquilpan HGO. Estudio su primaria y secundaria en Progreso de Obregón Hidalgo que es donde vive actualmente, y su bachillerato lo termino en el municipio del Tinaco, el cual le pertenece a Tezontepec de Aldama.
+Sus gustos son: los videojuegos, la musica y programar en Arduino, y actualmente busca reforzar sus conocimientos para así poder saber mas sobre el mundo en el que vivimos.
+\href{https://github.com/KleyderMurillo}{GitHub de Kleyder Murillo Martínez}
+
+\end{document}
