@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 # Proyecto-Byte_Force
->>>>>>>
 
 
 # Integrantes 
