@@ -31,7 +31,7 @@ public class FormulaGeneral {
             
         
         } else {
-            System.out.println ("La ecuacion no tiene soluciones reales");
+            System.out.println ("Pertenece al conjunto de los numeros reales");
         }
     }
     
